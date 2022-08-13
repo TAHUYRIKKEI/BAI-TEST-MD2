@@ -14,9 +14,9 @@ public class Main {
         System.out.println("5:, Delete Singer");
         System.out.println("6:, Sort Singer");
         System.out.println("7:, Exit");
-        int choice = Integer.parseInt(scanner.nextLine());
+        int choiceMenu = Integer.parseInt(scanner.nextLine());
         SingerView singerView = new SingerView();
-        switch (choice){
+        switch (choiceMenu){
             case 1:
                 singerView.showListSinger();
                 break;

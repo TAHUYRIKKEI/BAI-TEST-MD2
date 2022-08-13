@@ -14,7 +14,7 @@ public class SingerController {
     }
 
     public void addSinger(Singer singer) {
-        singerService.save(singer);
+        singerService.save();
     }
 
     public void deleteSinger(int id) {

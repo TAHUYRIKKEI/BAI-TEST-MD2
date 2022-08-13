@@ -13,6 +13,12 @@ public class SingerView {
         for (Singer singer: singerController.getSingers()){
             System.out.println(singer.getId() + "   " + singer.getName() + " " + singer.getAge());
         }
+        System.out.println("NHAP BACK DE QUAY LAI MENU");
+        String backMenu = scanner.nextLine();
+        if (backMenu.equalsIgnoreCase("back")) {
+            new Main();
+        }
+
     }
 
     public void createSinger() {
@@ -22,7 +28,13 @@ public class SingerView {
         int age = Integer.parseInt(scanner.nextLine());
         singerController.addSinger(new Singer(singerController.getSingers().size() + 1, name, age));
 
+        System.out.println("NHAP BACK DE QUAY LAI MENU");
+        String backMenu = scanner.nextLine();
+        if (backMenu.equalsIgnoreCase("back")) {
+            new Main();
+        }
     }
+
 
     public void updetatSinger() {
         System.out.println("EDIT SINGER");
@@ -38,12 +50,24 @@ public class SingerView {
         int age = Integer.parseInt(scanner.nextLine());
         singer.setName(name);
         singer.setAge(age);
+
+        System.out.println("NHAP BACK DE QUAY LAI MENU");
+        String backMenu = scanner.nextLine();
+        if (backMenu.equalsIgnoreCase("back")) {
+            new Main();
+        }
     }
     public void showDetailtSinger() {
         System.out.println("Enter singer id to show:");
         int id = Integer.parseInt(scanner.nextLine());
         Singer singer = singerController.findSingerById(id);
         System.out.println("Id:" + singer.getId() + ",name:" + singer.getName() + ",age" + singer.getAge());
+
+        System.out.println("NHAP BACK DE QUAY LAI MENU");
+        String backMenu = scanner.nextLine();
+        if (backMenu.equalsIgnoreCase("back")) {
+            new Main();
+        }
 
     }
 
@@ -61,6 +85,11 @@ public class SingerView {
             System.out.println("Not deleting");
         } else {
             System.out.println("Invalid choice");
+        }
+        System.out.println("NHAP BACK DE QUAY LAI MENU");
+        String backMenu = scanner.nextLine();
+        if (backMenu.equalsIgnoreCase("back")) {
+            new Main();
         }
 
 

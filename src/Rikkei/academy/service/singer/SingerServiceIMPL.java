@@ -27,7 +27,14 @@ public class SingerServiceIMPL implements ISingerService {
     }
 
     @Override
-    public void deleteById(int id) { singerList.remove(id-1);
+    public void deleteById(int id) {
+        for (int i = 0; i < singerList.size(); i++) {
+            if (id == singerList.get(i).getId()){
+                singerList.remove(i);
+            }
+
+        }
+
 
     }
 
@@ -40,6 +47,11 @@ public class SingerServiceIMPL implements ISingerService {
     public void sort() {
         Collections.sort(singerList);
         updateId();
+
+    }
+
+    @Override
+    public void save() {
 
     }
 
